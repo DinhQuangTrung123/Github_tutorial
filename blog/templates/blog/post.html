@@ -1,0 +1,11 @@
+{% extends "pages/base.html" %}
+{% block title  %}
+{{post.title}}
+{% endblock %}
+
+{% block content %}
+    <!--Posts chính là khóa key bên view-->
+ <h4><a href ='blog/{{post.id}}'>{{post.title}}</a></h4>
+ <h6>on {{post.date}}</h6>
+  {{post.body|safe|linebreaks}}
+{% endblock %}
